@@ -1,0 +1,160 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#edf1f5;
+    font-family:Segoe UI,sans-serif;
+}
+
+.layout{
+    display:flex;
+    min-height:100vh;
+}
+
+.sidebar{
+    width:240px;
+    background:#0f2c4f;
+    color:white;
+    padding:20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:30px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    margin-bottom:10px;
+}
+
+.sidebar a{
+    text-decoration:none;
+    color:white;
+    display:block;
+    padding:12px;
+    border-radius:8px;
+}
+
+.sidebar a:hover,
+.sidebar .active a{
+    background:#173f6b;
+}
+
+.content{
+    flex:1;
+    padding:20px;
+}
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
+    padding:12px 20px;
+    border-radius:12px;
+}
+
+.topbar input{
+    width:350px;
+    border:none;
+    background:#f1f3f5;
+    padding:8px 15px;
+    border-radius:20px;
+}
+
+.user-info{
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.user-info img{
+    border-radius:50%;
+}
+
+.stat-card{
+    color:white;
+    padding:20px;
+    border-radius:12px;
+}
+
+.orange{
+    background:#f39c12;
+}
+
+.blue{
+    background:#2980b9;
+}
+
+.green{
+    background:#27ae60;
+}
+
+.box-card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+}
+
+.activity{
+    margin-top:10px;
+}
+
+.activity li{
+    margin-bottom:10px;
+}
+/* KANBAN */
+
+.kanban-board{
+    display:flex;
+    gap:20px;
+}
+
+.kanban-column{
+    flex:1;
+    background:#f5f6f8;
+    border-radius:12px;
+    padding:15px;
+    min-height:500px;
+}
+
+.kanban-column h5{
+    margin-bottom:15px;
+}
+
+.task-card{
+    background:white;
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:10px;
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+.destaque{
+    background:#2f69b1;
+    color:white;
+}
+.red-card{
+    background:#e74c3c;
+}
+/* ===== ADICIONADOS ===== */
+.content{min-width:0}
+.user-info{gap:15px}
+.avatar{width:40px;height:40px;border-radius:50%;object-fit:cover}
+.ini{display:inline-flex;align-items:center;justify-content:center;background:#173f6b;color:#fff;font-weight:600}
+.purple{background:#8e44ad}
+.kanban-board{overflow-x:auto}
+.kanban-column{min-width:230px}
+.task-card{cursor:grab}
+.task-card:hover{box-shadow:0 4px 12px rgba(0,0,0,.18)}
+.kanban-column.over{outline:2px dashed #2980b9}
+.vazio{color:#6c757d;text-align:center;padding:30px}
+@media(max-width:768px){.layout{flex-direction:column}.sidebar{width:100%}.topbar input{width:100%}.topbar{gap:10px;flex-wrap:wrap}}
